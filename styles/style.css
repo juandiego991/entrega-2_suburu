@@ -72,7 +72,7 @@ body {
 
 .primerBox button {
   border-radius: 20px;
-  border:none;
+  border: none;
   background-color: skyblue;
   padding: 10px;
   margin: 20px;
@@ -105,4 +105,20 @@ body {
 #marcadorMapa {
   color: blue;
   border: 3px dotted red;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotoDeEquipo{
+  background: url(../img/IMG_20210208_101316.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
