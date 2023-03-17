@@ -50,6 +50,10 @@ body {
   align-items: center;
 }
 
+.footer .links{
+  font-size: 15px;
+}
+
 .primerSeccion {
   background: url(../img/IMG_20210207_174203.jpg);
   background-size: cover;
