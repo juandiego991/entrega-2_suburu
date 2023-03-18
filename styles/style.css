@@ -34,12 +34,59 @@ body {
 }
 
 .header .logo {
-  margin: 5px;
+  margin: 10px;
   padding: 5px;
 }
 
 .header .links {
   justify-content: space-between;
+
+}
+
+a{
+  font-size: 16px;
+  color: #0D6EFD;
+}
+
+.header .links ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .links li {
+  padding: 5px 25px 5px;
+  margin: 0;
+}
+
+/* media queries para hacer responsive el header */
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  li {
+    list-style-type: disc;
+  }
 }
 
 .footer {
@@ -50,7 +97,7 @@ body {
   align-items: center;
 }
 
-.footer .links{
+.footer .links {
   font-size: 15px;
 }
 
@@ -120,7 +167,7 @@ h4 {
   align-items: center;
 }
 
-.fotoDeEquipo{
+.fotoDeEquipo {
   background: url(../img/IMG_20210208_101316.jpg);
   background-position: center;
   background-size: cover;
