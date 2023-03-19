@@ -4,7 +4,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: darkblue;
   background-color: #ede8e2;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .grid-container {
@@ -16,11 +16,51 @@ body {
     "footer footer";
 
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 3fr 2fr 0.5fr;
+  grid-template-rows: auto 3fr 2fr 1fr;
   padding: 0;
   margin: 0;
   column-gap: 10px;
   row-gap: 10px;
+}
+
+/* grid responsive con media query */
+@media (min-width: 769px) {
+  
+}
+
+@media (min-width: 584px) and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "primerSeccion"
+      "segundaSeccion"
+      "footer";
+  
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 1fr auto;
+  }
+}
+
+@media (max-width: 583px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "primerSeccion"
+      "segundaSeccion"
+      "footer";
+  
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 1fr auto;
+  }
+}
+
+header {
+  background-color: #ede8e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header {
@@ -31,6 +71,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 8px;
 }
 
 .header .logo {
@@ -38,14 +79,10 @@ body {
   padding: 5px;
 }
 
-.header .links {
-  justify-content: space-between;
-
-}
-
-a{
+a {
   font-size: 16px;
-  color: #0D6EFD;
+  color: #0d6efd;
+  text-decoration: none;
 }
 
 .header .links ul {
@@ -61,9 +98,19 @@ a{
   margin: 0;
 }
 
-/* media queries para hacer responsive el header */
+/* media queries para pasar header y body a responsive */
 
-@media screen and (max-width: 768px) {
+@media (min-width: 769px) {
+  .header button {
+    display: none;
+  }
+}
+
+@media (min-width: 584px) and (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
   .header {
     display: flex;
     flex-direction: row;
@@ -71,35 +118,34 @@ a{
     align-items: center;
     justify-content: space-evenly;
   }
+
+  .header button {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 600px) {
-  ul {
+@media (max-width: 583px) {
+  body {
+    font-size: 24px;
+  }
+
+  .header .links {
+    display: none;
+  }
+
+  /* ul {
     list-style-type: disc;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
-}
-
-@media screen and (max-width: 600px) {
   li {
     list-style-type: disc;
-  }
+  } */
 }
 
-.footer {
-  background-color: #ede8e2;
-  grid-area: footer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer .links {
-  font-size: 15px;
-}
+/* estilo de seccion principal - pagina inicio */
 
 .primerSeccion {
   background: url(../img/IMG_20210207_174203.jpg);
@@ -108,17 +154,23 @@ a{
   background-repeat: no repeat;
   grid-area: primerSeccion;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .primerBox {
   background-color: #ede8e2;
+  opacity: 0.8;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
   border-radius: 20px;
-  margin: 0px;
-  padding-left: 5px;
-  margin: 5px;
+  margin: 24px;
+  padding: 24px;
+  border: 24px;
 }
 
 .primerBox button {
@@ -127,6 +179,48 @@ a{
   background-color: skyblue;
   padding: 10px;
   margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* media queries para hacer responsive la seccion principal */
+
+@media (max-width: 769px) {
+  .primerSeccion {
+    height: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .primerBox {
+    align-items: center;
+    width: auto;
+  }
+}
+
+@media (min-width: 584px) and (max-width: 768px) {
+  .primerBox {
+  }
+}
+
+@media (max-width: 583px) {
+}
+
+/* estilo del footer */
+
+.footer {
+  background-color: #cec1b6;
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 240px;
+}
+
+.footer .links a {
+  font-size: 15px;
+  text-decoration: none;
 }
 
 .segundaSeccion {
@@ -135,8 +229,8 @@ a{
 }
 
 .fotoSegundaSeccion {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  /* height: 300px; */
   object-fit: cover;
 }
 
