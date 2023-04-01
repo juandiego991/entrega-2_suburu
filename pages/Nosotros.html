@@ -19,41 +19,32 @@
   </head>
 
   <body>
-    <!-- navbar con bootstrap -->
-    <header
-      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
-    >
-      <a
-        href="/"
-        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
-      >
-        <svg class="bi me-2" width="40" height="32">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-        <span class="fs-4">
-          <img src="../img/favicon.png" alt="logo" height="100px" width="100px"
-        /></span>
-      </a>
+    
+    
+        <!-- navbar con bootstrap - con menu hamburguesa-->
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+              <div class="logo">
+                <img src="../img/favicon.png" alt="logo" height="100px" width="100px" />
+              </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                <a class="nav-link" href="../pages/Nosotros.html">Nosotros</a>
+                <a class="nav-link" href="../pages/Carta de alfajores.html">Carta de alfajores</a>
+                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+              </div>
+            </div>
+          </div>
+        </nav>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="../index.html" class="nav-link" aria-current="page"
-            >Inicio</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="../pages/Nosotros.html" class="nav-link">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/Carta de alfajores.html" class="nav-link"
-            >Carta de Alfajores</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="../pages/contacto.html" class="nav-link">Contacto</a>
-        </li>
-      </ul>
-    </header>
+
+
 
     <!-- seccion corporativa - nuestros valores -->
 
